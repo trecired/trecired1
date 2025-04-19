@@ -2,43 +2,81 @@
 <html lang="sr">
 <head>
   <meta charset="UTF-8">
-  <title>Treći Red</title>
+  <title>Treći Red - Naslovna</title>
   <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      padding: 50px;
-      background: #f4f4f4;
-    }
-    nav {
-      background: #333;
-      padding: 10px;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .content {
-      background: white;
-      padding: 30px;
-      margin-top: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+    body { font-family: sans-serif; margin: 0; background: #f4f4f4; }
+    header { background: #222; color: white; padding: 15px; text-align: center; }
+    nav { background: #444; padding: 10px; text-align: center; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+    .container { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
+    .main-news { background: white; padding: 20px; box-shadow: 0 0 10px #ccc; }
+    .main-news h2 { margin-top: 0; }
+    .section { margin-top: 30px; }
+    .section h3 { border-bottom: 2px solid #ccc; padding-bottom: 5px; }
+    .section .item { margin: 10px 0; background: white; padding: 15px; box-shadow: 0 0 5px #ddd; }
+    footer { background: #222; color: white; text-align: center; padding: 10px; margin-top: 40px; }
   </style>
 </head>
 <body>
+
+  <header>
+    <h1>Treći Red</h1>
+    <p>Glas naroda. Istina bez filtera.</p>
+  </header>
+
   <nav>
-    <a href="index.html">Početna</a>
-    <a href="o-nama.html">O nama</a>
+    <a href="index.html">Naslovna</a>
+    <a href="politika.html">Politika</a>
+    <a href="drustvo.html">Društvo</a>
+    <a href="ekonomija.html">Ekonomija</a>
+    <a href="zabava.html">Zabava</a>
     <a href="kontakt.html">Kontakt</a>
   </nav>
 
-  <div class="content">
-    <h1>Dobrodošao u Treći Red</h1>
-    <p>Ovo je tvoja početna stranica. Slobodno je proširi idejama, sadržajem, tekstovima i vizijom!</p>
+  <div class="container">
+    <div class="main-news">
+      <h2>EKSKLUZIVNO: Ko zapravo upravlja državom iz senke?</h2>
+      <p><strong>Autor:</strong> Redakcija | <strong>Datum:</strong> 19. april 2025.</p>
+      <p>U analizi koju donosimo, osvetljavamo strukturu moći koja se retko vidi, a stalno utiče...</p>
+      <a href="vesti/ko-upravlja-iz-senke.html">Pročitaj više</a>
+    </div>
+
+    <div class="section">
+      <h3>Politika</h3>
+      <div class="item">
+        <h4>Nova vlada – stara pravila?</h4>
+        <a href="vesti/nova-vlada.html">Čitaj dalje</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Društvo</h3>
+      <div class="item">
+        <h4>Kako prepoznati manipulaciju u medijima</h4>
+        <a href="vesti/mediji-manipulacija.html">Čitaj dalje</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Ekonomija</h3>
+      <div class="item">
+        <h4>Pad dinara: slučajnost ili scenario?</h4>
+        <a href="vesti/pad-dinara.html">Čitaj dalje</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Zabava</h3>
+      <div class="item">
+        <h4>Najbolje serije 2025. koje ne smeš da propustiš</h4>
+        <a href="vesti/serije-2025.html">Čitaj dalje</a>
+      </div>
+    </div>
   </div>
+
+  <footer>
+    &copy; Treći Red - 2025 | Sva prava zadržana.
+  </footer>
+
 </body>
 </html>
