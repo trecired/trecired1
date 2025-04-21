@@ -2,47 +2,88 @@
 <html lang="sr">
 <head>
   <meta charset="UTF-8">
-  <title>Zabava - Treći Red</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zabava | Treći Red</title>
   <style>
-    body { font-family: sans-serif; margin: 0; background: #f4f4f4; }
-    header, footer { background: #222; color: white; text-align: center; padding: 15px; }
-    nav { background: #444; padding: 10px; text-align: center; }
-    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-    .container { max-width: 1000px; margin: 20px auto; padding: 20px; background: white; box-shadow: 0 0 10px #ccc; }
-    .vest { margin-bottom: 30px; }
-    img { max-width: 100%; height: auto; border-radius: 10px; margin-bottom: 10px; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    nav {
+      background-color: #c40000;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo {
+      height: 50px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 30px 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #c40000;
+      border-bottom: 2px solid #c40000;
+      padding-bottom: 5px;
+    }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>Treći Red</h1>
-  </header>
-
   <nav>
-    <a href="index.html">Naslovna</a>
-    <a href="politika.html">Politika</a>
-    <a href="drustvo.html">Društvo</a>
-    <a href="ekonomija.html">Ekonomija</a>
-    <a href="zabava.html">Zabava</a>
-    <a href="kontakt.html">Kontakt</a>
+    <img src="trecired.jpg" alt="Treći Red Logo" class="logo">
+    <ul>
+      <li><a href="/trecired1/index.html">Naslovna</a></li>
+      <li><a href="/trecired1/drustvo.html">Društvo</a></li>
+      <li><a href="/trecired1/biznis.html">Biznis</a></li>
+      <li><a href="/trecired1/serije-i-filmovi.html">Serije i filmovi</a></li>
+      <li><a href="/trecired1/igre.html">Igre</a></li>
+      <li><a href="/trecired1/zabava.html">Zabava</a></li>
+      <li><a href="/trecired1/kontakt.html">Kontakt</a></li>
+    </ul>
   </nav>
 
-  <div class="container">
-    <h2>Zabava</h2>
+  <main>
+    <h1>Zabava</h1>
 
-    <div class="vest">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Cinema_Interior.jpg/800px-Cinema_Interior.jpg" alt="Bioskop">
-      <h3>Najgledaniji filmovi 2025. godine</h3>
-      <p>Publika širom Srbije uživa u novim ostvarenjima domaće i strane kinematografije. Komedije i trilere su najpopularniji žanrovi ove godine.</p>
-      <a href="#">Pročitaj više</a>
-    </div>
+    <section>
+      <h2>🎉 Zanimljivosti</h2>
+      <p>Ovde ide neki smešan, čudan ili neobičan tekst ili link.</p>
+    </section>
 
-  </div>
+    <section>
+      <h2>😂 Humor</h2>
+      <p>Ovde možemo ubaciti neki vic, meme, ili TikTok embed.</p>
+    </section>
 
-  <footer>
-    &copy; Treći Red - 2025
-  </footer>
+    <section>
+      <h2>🧠 Kvizovi</h2>
+      <p>Ovde će biti kvizovi i zabavni testovi.</p>
+    </section>
 
+  </main>
 </body>
 </html>
+
+      
