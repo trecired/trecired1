@@ -1,12 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="sr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Igre | Treći Red</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+    nav {
+      background-color: #c40000;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo {
+      height: 50px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .game-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .game-card {
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .game-card h3 {
+      margin-top: 0;
+    }
+    .game-card button {
+      background-color: #c40000;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .game-card button:hover {
+      background-color: #a00000;
+    }
+  </style>
 </head>
 <body>
-  <h1>Igre</h1>
-  <p>Tekstovi o igrama, gejming kulturi i digitalnoj zabavi.</p>
+  <nav>
+    <img src="trecired.jpg" alt="Treći Red Logo" class="logo">
+    <ul>
+      <li><a href="/trecired1/index.html">Naslovna</a></li>
+      <li><a href="/trecired1/drustvo.html">Društvo</a></li>
+      <li><a href="/trecired1/biznis.html">Biznis</a></li>
+      <li><a href="/trecired1/serije-i-filmovi.html">Serije i filmovi</a></li>
+      <li><a href="/trecired1/igre.html">Igre</a></li>
+      <li><a href="/trecired1/zabava.html">Zabava</a></li>
+      <li><a href="/trecired1/kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Igre</h1>
+    <div class="game-grid">
+      <div class="game-card">
+        <h3>Poker</h3>
+        <p>Klasika u kartama</p>
+        <button onclick="playGame('Poker')">Igraj</button>
+      </div>
+      <div class="game-card">
+        <h3>Jamb</h3>
+        <p>Baci kockice, osvoji poene</p>
+        <button onclick="playGame('Jamb')">Igraj</button>
+      </div>
+      <div class="game-card">
+        <h3>Šah</h3>
+        <p>Izazovi logiku i strategiju</p>
+        <button onclick="playGame('Sah')">Šahuj</button>
+      </div>
+    </div>
+    <p id="limit-msg" style="margin-top:20px;font-weight:bold;"></p>
+  </main>
+
+  <script>
+    let freePlays = 3;
+
+    function playGame(gameName) {
+      if (freePlays > 0) {
+        freePlays--;
+        alert("Igra: " + gameName + "\nPreostalo besplatnih igranja: " + freePlays);
+      } else {
+        document.getElementById("limit-msg").innerText = "Limit besplatnih igranja je dostignut. Pretplatite se za neograničen pristup.";
+      }
+    }
+  </script>
 </body>
 </html>
