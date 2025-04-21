@@ -2,85 +2,63 @@
 <html lang="sr">
 <head>
   <meta charset="UTF-8">
-  <title>Treći Red - Naslovna</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treći Red</title>
   <style>
-    body { font-family: sans-serif; margin: 0; background: #f4f4f4; }
-    header, footer { background: #222; color: white; padding: 15px; text-align: center; }
-    nav { background: #444; padding: 10px; text-align: center; }
-    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-    .container { max-width: 1000px; margin: 20px auto; padding: 20px; }
-    .vest { background: white; padding: 20px; margin-bottom: 20px; box-shadow: 0 0 10px #ccc; border-radius: 10px; }
-    .vest img { max-width: 100%; height: auto; border-radius: 10px; margin-bottom: 10px; }
-    .vest a { text-decoration: none; color: #0066cc; font-weight: bold; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+    nav {
+      background-color: #c40000;
+      padding: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 5px 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 20px;
+    }
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
   </style>
 </head>
 <body>
-
-<header>
-  <img src="trecired.jpg" alt="Logo Treći Red" style="height: 80px; vertical-align: middle;">
-  <h1 style="display: inline-block; margin-left: 15px;">Treći Red</h1>
-  <p>Glas naroda. Istina bez filtera.</p>
-</header>
-
-
-
-
-
   <nav>
-    <a href="index.html">Naslovna</a>
-    <a href="politika.html">Politika</a>
-    <a href="drustvo.html">Društvo</a>
-    <a href="ekonomija.html">Ekonomija</a>
-    <a href="zabava.html">Zabava</a>
-    <a href="kontakt.html">Kontakt</a>
+    <ul>
+      <li><a href="/index.html">Naslovna</a></li>
+      <li><a href="/drustvo.html">Društvo</a></li>
+      <li><a href="/biznis.html">Biznis</a></li>
+      <li><a href="/serije-i-filmovi.html">Serije i filmovi</a></li>
+      <li><a href="/igre.html">Igre</a></li>
+      <li><a href="/zabava.html">Zabava</a></li>
+      <li><a href="/kontakt.html">Kontakt</a></li>
+    </ul>
   </nav>
-
-  <div class="container">
-    <div class="vest">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Dinar_coins_Serbia.jpg/640px-Dinar_coins_Serbia.jpg" alt="Pad dinara">
-      <h2>Pad dinara: slučajnost ili scenario?</h2>
-      <p>Dinar je pao za 3,2% prema evru, a reakcije ekonomista ne prestaju...</p>
-      <a href="pad-dinara.html">Pročitaj više</a>
-    </div>
-
-    <div class="vest">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Price_tags.jpg/640px-Price_tags.jpg" alt="Cene">
-      <h2>Porast cena utiče na svakodnevni život građana</h2>
-      <p>Rastući troškovi života sve više pogađaju domaćinstva širom Srbije.</p>
-      <a href="cene-porasle.html">Pročitaj više</a>
-    </div>
-
-    <div class="vest">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Parliament_of_Serbia.jpg/800px-Parliament_of_Serbia.jpg" alt="Skupština">
-      <h2>Nova sednica skupštine: prioriteti u fokusu</h2>
-      <p>Političke teme i rasprave obeležile su današnje zasedanje u Beogradu.</p>
-      <a href="politika.html">Pročitaj više</a>
-    </div>
-
-    <div class="vest">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Belgrade_people.jpg/800px-Belgrade_people.jpg" alt="Beograd ulice">
-      <h2>Život u gradu: izazovi modernog društva</h2>
-      <p>Gužve, stres i svakodnevni ritam života sve više utiču na zdravlje građana.</p>
-      <a href="drustvo.html">Pročitaj više</a>
-    </div>
-
-    <div class="vest">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Cinema_Interior.jpg/800px-Cinema_Interior.jpg" alt="Bioskop">
-      <h2>Najgledaniji filmovi 2025. godine</h2>
-      <p>Komedije, trilere i domaće produkcije gledamo više nego ikad!</p>
-      <a href="zabava.html">Pročitaj više</a>
-    </div>
-  </div>
-
-  <footer>
-    &copy; Treći Red - 2025 | Sva prava zadržana.
-  </footer>
-  <header>
-  <img src="https://i.imgur.com/B5MiWXG.png" alt="Logo Treći Red" style="height: 70px; vertical-align: middle;">
-  <h1 style="display: inline-block; margin-left: 15px;">Treći Red</h1>
-  <p>Glas naroda. Istina bez filtera.</p>
-</header>
-
-
+  <main>
+    <h1>Dobrodošli na Treći Red</h1>
+    <p>Vaše nezavisne internet novine. Pišemo o onome što drugi preskoče.</p>
+  </main>
 </body>
 </html>
+
