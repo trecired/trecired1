@@ -9,6 +9,7 @@
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #fff;
+      text-align: center;
     }
     nav {
       background-color: #c40000;
@@ -18,6 +19,7 @@
       list-style: none;
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       margin: 0;
       padding: 0;
     }
@@ -33,12 +35,17 @@
       text-decoration: underline;
     }
     main {
-      padding: 20px;
+      padding: 30px 20px;
+    }
+    img.logo {
+      max-width: 200px;
+      height: auto;
+      margin: 30px 0 10px;
     }
     @media (max-width: 600px) {
       nav ul {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
       }
     }
   </style>
@@ -56,6 +63,7 @@
     </ul>
   </nav>
   <main>
+    <img src="trecired.jpg" alt="Treći Red Logo" class="logo">
     <h1>Dobrodošli na Treći Red</h1>
     <p>Vaše nezavisne internet novine. Pišemo o onome što drugi preskoče.</p>
   </main>
