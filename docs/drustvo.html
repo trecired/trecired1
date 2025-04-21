@@ -8,21 +8,26 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #fff;
     }
     nav {
-      background-color: #c40000; /* CRVENA boja menija */
-      padding: 10px;
+      background-color: #c40000;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo {
+      height: 50px;
     }
     nav ul {
       list-style: none;
       display: flex;
-      flex-wrap: wrap;
       margin: 0;
       padding: 0;
     }
     nav ul li {
-      margin: 5px 10px;
+      margin: 0 10px;
     }
     nav ul li a {
       color: white;
@@ -33,33 +38,58 @@
       text-decoration: underline;
     }
     main {
-      padding: 20px;
+      padding: 30px 20px;
     }
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #c40000;
+      border-bottom: 2px solid #c40000;
+      padding-bottom: 5px;
     }
   </style>
 </head>
 <body>
   <nav>
+    <img src="trecired.jpg" alt="Treći Red Logo" class="logo">
     <ul>
-      <li><a href="/index.html">Naslovna</a></li>
-      <li><a href="/drustvo.html">Društvo</a></li>
-      <li><a href="/biznis.html">Biznis</a></li>
-      <li><a href="/serije-i-filmovi.html">Serije i filmovi</a></li>
-      <li><a href="/igre.html">Igre</a></li>
-      <li><a href="/zabava.html">Zabava</a></li>
-      <li><a href="/kontakt.html">Kontakt</a></li>
+      <li><a href="/trecired1/index.html">Naslovna</a></li>
+      <li><a href="/trecired1/drustvo.html">Društvo</a></li>
+      <li><a href="/trecired1/biznis.html">Biznis</a></li>
+      <li><a href="/trecired1/serije-i-filmovi.html">Serije i filmovi</a></li>
+      <li><a href="/trecired1/igre.html">Igre</a></li>
+      <li><a href="/trecired1/zabava.html">Zabava</a></li>
+      <li><a href="/trecired1/kontakt.html">Kontakt</a></li>
     </ul>
   </nav>
+
   <main>
     <h1>Društvo</h1>
-    <p>Ovde pišemo o ljudima, zajednici, svakodnevnim problemima i stvarima koje nas sve dotiču. Ekonomija, život, borba i nada — sve staje pod jednu reč: društvo.</p>
+
+    <section>
+      <h2>📌 Stvarni život i problemi građana</h2>
+      <p>Ovde pišemo o svakodnevnim temama koje pogađaju narod: stanovanje, rad, komunalne teme i svakodnevna borba.</p>
+    </section>
+
+    <section>
+      <h2>📰 Lokalne priče i reportaže</h2>
+      <p>Teme iz malih mesta, izveštaji s terena i realni prikazi života van velikih centara.</p>
+    </section>
+
+    <section>
+      <h2>🧍 Priče običnih ljudi</h2>
+      <p>Istinite i iskrene priče građana koje nećete videti na naslovnicama.</p>
+    </section>
+
+    <section>
+      <h2>🏥 Zdravstvo, obrazovanje i socijalna pitanja</h2>
+      <p>Problemi u zdravstvenom sistemu, školstvu, penzijama i svim stvarima koje direktno dotiču narod.</p>
+    </section>
+
   </main>
 </body>
 </html>
+
 
 
