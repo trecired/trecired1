@@ -2,53 +2,129 @@
 <html lang="sr">
 <head>
   <meta charset="UTF-8">
-  <title>Top 3 domaće serije koje leče živce - Treći Red</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serije i filmovi | Treći Red</title>
   <style>
-    body { font-family: sans-serif; margin: 0; background: #f4f4f4; }
-    header, footer { background: #222; color: white; text-align: center; padding: 15px; }
-    nav { background: #444; padding: 10px; text-align: center; }
-    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-    .container { max-width: 800px; margin: 20px auto; background: white; padding: 20px; box-shadow: 0 0 5px #aaa; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+    nav {
+      background-color: #c40000;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo {
+      height: 50px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 30px 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #c40000;
+      border-bottom: 2px solid #c40000;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+    ul.lista {
+      padding-left: 20px;
+    }
+    ul.lista li {
+      margin: 5px 0;
+    }
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul li {
+        margin: 5px 0;
+      }
+    }
   </style>
 </head>
 <body>
-
-  <header>
-    <img src="trecired.jpg" alt="Logo" style="height: 70px; vertical-align: middle;">
-    <h1 style="display:inline-block; margin-left: 10px;">Treći Red</h1>
-    <p>Glas naroda. Istina bez filtera.</p>
-  </header>
-
   <nav>
-    <a href="index.html">Naslovna</a>
-    <a href="politika.html">Politika</a>
-    <a href="drustvo.html">Društvo</a>
-    <a href="ekonomija.html">Ekonomija</a>
-    <a href="zabava.html">Zabava</a>
-    <a href="kontakt.html">Kontakt</a>
+    <img src="trecired.jpg" alt="Treći Red Logo" class="logo">
+    <ul>
+      <li><a href="/trecired1/index.html">Naslovna</a></li>
+      <li><a href="/trecired1/drustvo.html">Društvo</a></li>
+      <li><a href="/trecired1/biznis.html">Biznis</a></li>
+      <li><a href="/trecired1/serije-i-filmovi.html">Serije i filmovi</a></li>
+      <li><a href="/trecired1/igre.html">Igre</a></li>
+      <li><a href="/trecired1/zabava.html">Zabava</a></li>
+      <li><a href="/trecired1/kontakt.html">Kontakt</a></li>
+    </ul>
   </nav>
+  <main>
+    <h1>Serije i filmovi</h1>
 
-  <div class="container">
-    <h2>Top 3 domaće serije koje leče živce posle napornog dana</h2>
-    <p><strong>Datum:</strong> 21. april 2025. | <strong>Autor:</strong> Redakcija Treći Red</p>
+    <section>
+      <h2>🎥 Domaće serije</h2>
+      <ul class="lista">
+        <li>Porodično blago</li>
+        <li>Moj rođak sa sela</li>
+        <li>Selo gori, a baba se češlja</li>
+      </ul>
+    </section>
 
-    <p>U vremenima kada su naslovi puni tenzije i ekrana prepuni stresa, mnogi se okreću nečemu jednostavnom — dobroj domaćoj seriji.</p>
+    <section>
+      <h2>🎬 Strane serije</h2>
+      <ul class="lista">
+        <li>Breaking Bad</li>
+        <li>La Casa de Papel</li>
+        <li>Game of Thrones</li>
+      </ul>
+    </section>
 
-    <p><strong>1. Moj rođak sa sela</strong><br>
-    Humor, selo, problemi, porodica — sve to, ali bez agresije. Idealno za gledanje uz čaj ili pivo.</p>
+    <section>
+      <h2>🎞️ Domaći filmovi</h2>
+      <ul class="lista">
+        <li>Balkanski špijun</li>
+        <li>Maratonci trče počasni krug</li>
+        <li>Ko to tamo peva</li>
+      </ul>
+    </section>
 
-    <p><strong>2. Porodično blago</strong><br>
-    Serija koju zna cela nacija. Nema šoka, nema zla — samo karakteri koje osećaš kao rodbinu.</p>
+    <section>
+      <h2>🌍 Strani filmovi</h2>
+      <ul class="lista">
+        <li>Forrest Gump</li>
+        <li>Inception</li>
+        <li>The Godfather</li>
+      </ul>
+    </section>
 
-    <p><strong>3. Državni posao</strong><br>
-    Satira na državni aparat, ali kroz šalu, ironiju i sarkazam. Daje ti osećaj da nisi lud — sistem je taj koji jeste.</p>
-
-    <p>Ako ste se umorili od vesti, serije mogu biti ventil. A možda i inspiracija da svet pogledamo malo blaže.</p>
-  </div>
-
-  <footer>
-    &copy; Treći Red - 2025
-  </footer>
-
+  </main>
 </body>
 </html>
+
