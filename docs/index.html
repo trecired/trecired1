@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="sr">
 <head>
@@ -9,22 +10,27 @@
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #fff;
-      text-align: center;
     }
     nav {
       background-color: #c40000;
-      padding: 10px;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo {
+      height: 50px;
     }
     nav ul {
       list-style: none;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       margin: 0;
       padding: 0;
     }
     nav ul li {
-      margin: 5px 10px;
+      margin: 0 10px;
     }
     nav ul li a {
       color: white;
@@ -36,20 +42,26 @@
     }
     main {
       padding: 30px 20px;
+      text-align: center;
     }
-    <img src="trecired.jpg" alt="Treći Red Logo" class="logo">
-
-    }
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
       nav ul {
         flex-direction: column;
         align-items: center;
+      }
+      nav ul li {
+        margin: 5px 0;
       }
     }
   </style>
 </head>
 <body>
   <nav>
+    <img src="trecired.jpg" alt="Treći Red Logo" class="logo">
     <ul>
       <li><a href="/index.html">Naslovna</a></li>
       <li><a href="/drustvo.html">Društvo</a></li>
@@ -61,10 +73,8 @@
     </ul>
   </nav>
   <main>
-    <img src="trecired.jpg" alt="Treći Red Logo" class="logo">
     <h1>Dobrodošli na Treći Red</h1>
     <p>Vaše nezavisne internet novine. Pišemo o onome što drugi preskoče.</p>
   </main>
 </body>
 </html>
-
