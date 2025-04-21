@@ -2,47 +2,60 @@
 <html lang="sr">
 <head>
   <meta charset="UTF-8">
-  <title>Društvo - Treći Red</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Društvo | Treći Red</title>
   <style>
-    body { font-family: sans-serif; margin: 0; background: #f4f4f4; }
-    header, footer { background: #222; color: white; text-align: center; padding: 15px; }
-    nav { background: #444; padding: 10px; text-align: center; }
-    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-    .container { max-width: 1000px; margin: 20px auto; padding: 20px; background: white; box-shadow: 0 0 10px #ccc; }
-    .vest { margin-bottom: 30px; }
-    img { max-width: 100%; height: auto; border-radius: 10px; margin-bottom: 10px; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+    nav {
+      background-color: #c40000;
+      padding: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 5px 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 20px;
+    }
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>Treći Red</h1>
-  </header>
-
   <nav>
-    <a href="index.html">Naslovna</a>
-    <a href="politika.html">Politika</a>
-    <a href="drustvo.html">Društvo</a>
-    <a href="ekonomija.html">Ekonomija</a>
-    <a href="zabava.html">Zabava</a>
-    <a href="kontakt.html">Kontakt</a>
+    <ul>
+      <li><a href="/index.html">Naslovna</a></li>
+      <li><a href="/drustvo.html">Društvo</a></li>
+      <li><a href="/biznis.html">Biznis</a></li>
+      <li><a href="/serije-i-filmovi.html">Serije i filmovi</a></li>
+      <li><a href="/igre.html">Igre</a></li>
+      <li><a href="/zabava.html">Zabava</a></li>
+      <li><a href="/kontakt.html">Kontakt</a></li>
+    </ul>
   </nav>
+  <main>
+    <h1>Društvo</h1>
+    <p>Ovde pišemo o ljudima, zajednici, svakodnevnim problemima i stvarima koje nas sve dotiču. Ekonomija, život, borba i nada — sve staje pod jednu reč: društvo.</p>
 
-  <div class="container">
-    <h2>Društvo</h2>
-
-    <div class="vest">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Belgrade_people.jpg/800px-Belgrade_people.jpg" alt="Beograd ulice">
-      <h3>Život u gradu: izazovi modernog društva</h3>
-      <p>Urbani način života nosi mnoge prednosti, ali i izazove: gužve, stres, manjak vremena. Građani sve više traže ravnotežu između posla i privatnog života.</p>
-      <a href="#">Pročitaj više</a>
-    </div>
-
-  </div>
-
-  <footer>
-    &copy; Treći Red - 2025
-  </footer>
-
-</body>
-</html>
