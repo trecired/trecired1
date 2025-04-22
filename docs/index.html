@@ -1,81 +1,75 @@
-
 <!DOCTYPE html>
 <html lang="sr">
 <head>
   <meta charset="UTF-8">
+  <title>Treći Red - Naslovna</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Treći Red</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #fff;
-    }
-    nav {
-      background-color: #c40000;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    .logo {
-      height: 50px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
       margin: 0;
       padding: 0;
     }
-    nav ul li {
-      margin: 0 10px;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-    main {
-      padding: 30px 20px;
+    header {
+      background-color: #cc0000;
+      padding: 15px;
       text-align: center;
     }
-    @media (max-width: 700px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav ul li {
-        margin: 5px 0;
-      }
+    header h1 {
+      color: white;
+      margin: 0;
+    }
+    nav {
+      background-color: #222;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    #hero {
+      padding: 60px 20px;
+      background-color: #f8f8f8;
+      text-align: center;
+    }
+    #hero h1 {
+      font-size: 48px;
+      color: #cc0000;
+    }
+    #hero p {
+      font-size: 18px;
+      color: #333;
+    }
+    #hero a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #cc0000;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
+
+  <header>
+    <h1>Treći Red</h1>
+  </header>
+
   <nav>
-    <img src="trecired.jpg" alt="Treći Red Logo" class="logo">
-    <ul>
-      <li><a href="/trecired1/index.html">Naslovna</a></li>
-      <li><a href="/trecired1/drustvo.html">Društvo</a></li>
-      <li><a href="/trecired1/biznis.html">Biznis</a></li>
-      <li><a href="/trecired1/serije-i-filmovi.html">Serije i filmovi</a></li>
-      <li><a href="/trecired1/igre.html">Igre</a></li>
-      <li><a href="/trecired1/zabava.html">Zabava</a></li>
-      <li><a href="/trecired1/kontakt.html">Kontakt</a></li>
-    </ul>
+    <a href="index.html">Naslovna</a>
+    <a href="drustvo.html">Društvo</a>
+    <a href="biznis.html">Biznis</a>
+    <a href="zabava.html">Zabava</a>
+    <a href="serije.html">Serije i filmovi</a>
+    <a href="igre.html">Igre</a>
+    <a href="kontakt.html">Kontakt</a>
   </nav>
-  <main>
-    <h1>Dobrodošli na Treći Red</h1>
-    <p>Vaše nezavisne internet novine. Pišemo o onome što drugi preskoče.</p>
-  </main>
-</body>
-</html>
+
+  <!--
+
 
