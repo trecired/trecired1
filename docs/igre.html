@@ -126,16 +126,36 @@
   </main>
 
   <script>
-    let freePlays = 3;
+    let freePlays = localStorage.getItem("freePlays") || 3;
+    freePlays = parseInt(freePlays);
 
     function playGame(gameName) {
       if (freePlays > 0) {
         freePlays--;
-        alert("Igra: " + gameName + "\\nPreostalo besplatnih igranja: " + freePlays);
+        localStorage.setItem("freePlays", freePlays);
+
+        // Odredi URL igre na osnovu imena
+        let url = "";
+        switch(gameName) {
+          case "Poker":
+            url = "poker.html";
+            break;
+          case "Jamb":
+            url = "jamb.html";
+            break;
+          case "Šah":
+            url = "sah.html";
+            break;
+        }
+
+        // Otvori igru
+        window.location.href = url;
       } else {
-        document.getElementById("limit-msg").innerText = "Limit besplatnih igranja je dostignut. Pretplatite se za neograničen pristup.";
+        document.getElementById("limit-msg").innerText =
+          "Limit besplatnih igranja je dostignut. Pretplatite se za neograničen pristup.";
       }
     }
   </script>
 </body>
 </html>
+
