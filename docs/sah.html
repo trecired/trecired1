@@ -2,11 +2,63 @@
 <html lang="sr">
 <head>
   <meta charset="UTF-8">
-  <title>Šah | Treći Red</title>
+  <title>Šah protiv kompjutera | Treći Red</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/1.0.0/chess.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+      background: #f0f0f0;
+    }
+    #board {
+      width: 400px;
+      margin: auto;
+    }
+    h1 {
+      color: #333;
+    }
+  </style>
 </head>
 <body>
-  <h1>Šah</h1>
-  <p>Ova igra još nije dostupna. Uskoro dolazi!</p>
-  <a href="igre.html">⬅ Vrati se na igre</a>
+  <h1>Šah protiv kompjutera</h1>
+  <div id="board"></div>
+  <p><a href="igre.html">⬅ Vrati se na igre</a></p>
+
+  <script>
+    const board = Chessboard('board', {
+      draggable: true,
+      dropOffBoard: 'snapback',
+      position: 'start',
+      onDrop: onDrop
+    });
+
+    const game = new Chess();
+
+    function onDrop(source, target) {
+      const move = game.move({
+        from: source,
+        to: target,
+        promotion: 'q'
+      });
+
+      if (move === null) return 'snapback';
+
+      window.setTimeout(makeBestMove, 250);
+    }
+
+    function makeBestMove() {
+      const possibleMoves = game.moves();
+
+      if (game.game_over()) return;
+
+      const move = possibleMoves[Math.floor(Math.random() * possibleMoves.length)];
+      game.move(move);
+      board.position(game.fen());
+    }
+  </script>
 </body>
 </html>
+
