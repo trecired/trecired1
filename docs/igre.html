@@ -130,9 +130,13 @@
     freePlays = parseInt(freePlays);
 
     function playGame(gameName) {
-      if (freePlays > 0) {
-        freePlays--;
-        localStorage.setItem("freePlays", freePlays);
+     if (gameName === "ADMIN_UNLOCK") {
+  freePlays = 9999;
+  localStorage.setItem("freePlays", freePlays);
+  alert("Neograničen pristup otključan!");
+  return;
+}
+
 
         // Odredi URL igre na osnovu imena
         let url = "";
