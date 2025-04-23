@@ -2,7 +2,81 @@
 <html lang="sr">
 <head>
   <meta charset="UTF-8">
-  <
+  <title>Šah protiv kompjutera</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+    #board {
+      width: 400px;
+      margin: 20px auto;
+    }
+    #status {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Šah protiv kompjutera</h1>
+  <div id="board"></div>
+  <div id="status"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard.min.js"></script>
+  <script>
+    const board = Chessboard('board', {
+      draggable: true,
+      dropOffBoard: 'snapback',
+      position: 'start',
+      onDrop: onDrop
+    });
+
+    const game = new Chess();
+
+    function onDrop(source, target) {
+      const move = game.move({
+        from: source,
+        to: target,
+        promotion: 'q'
+      });
+
+      if (move === null) return 'snapback';
+
+      window.setTimeout(makeRandomMove, 250);
+      updateStatus();
+    }
+
+    function makeRandomMove() {
+      const possibleMoves = game.moves();
+      if (game.game_over()) return;
+
+      const randomIdx = Math.floor(Math.random() * possibleMoves.length);
+      game.move(possibleMoves[randomIdx]);
+      board.position(game.fen());
+      updateStatus();
+    }
+
+    function updateStatus() {
+      let status = '';
+
+      if (game.in_checkmate()) {
+        status = 'Šah mat!';
+      } else if (game.in_draw()) {
+        status = 'Remi!';
+      } else {
+        status = 'Na potezu: ' + (game.turn() === 'w' ? 'Beli' : 'Crni');
+      }
+
+      document.getElementById('status').innerText = status;
+    }
+
+    updateStatus();
+  </script>
+</body>
+</html>
 
        
 
