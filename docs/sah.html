@@ -2,31 +2,30 @@
 <html lang="sr">
 <head>
   <meta charset="UTF-8">
-  <title>Šah protiv kompjutera | Treći Red</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/1.0.0/chess.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard.min.js"></script>
+  <title>Šah protiv kompjutera</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard.min.css" />
   <style>
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
       text-align: center;
-      background: #f0f0f0;
     }
     #board {
       width: 400px;
-      margin: auto;
+      margin: 20px auto;
     }
-    h1 {
-      color: #333;
+    #status {
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
   <h1>Šah protiv kompjutera</h1>
   <div id="board"></div>
-  <p><a href="igre.html">⬅ Vrati se na igre</a></p>
+  <div id="status"></div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard.min.js"></script>
   <script>
     const board = Chessboard('board', {
       draggable: true,
@@ -46,18 +45,35 @@
 
       if (move === null) return 'snapback';
 
-      window.setTimeout(makeBestMove, 250);
+      window.setTimeout(makeRandomMove, 250);
+      updateStatus();
     }
 
-    function makeBestMove() {
+    function makeRandomMove() {
       const possibleMoves = game.moves();
-
       if (game.game_over()) return;
 
-      const move = possibleMoves[Math.floor(Math.random() * possibleMoves.length)];
-      game.move(move);
+      const randomIdx = Math.floor(Math.random() * possibleMoves.length);
+      game.move(possibleMoves[randomIdx]);
       board.position(game.fen());
+      updateStatus();
     }
+
+    function updateStatus() {
+      let status = '';
+
+      if (game.in_checkmate()) {
+        status = 'Šah mat!';
+      } else if (game.in_draw()) {
+        status = 'Remi!';
+      } else {
+        status = 'Na potezu: ' + (game.turn() === 'w' ? 'Beli' : 'Crni');
+      }
+
+      document.getElementById('status').innerText = status;
+    }
+
+    updateStatus();
   </script>
 </body>
 </html>
