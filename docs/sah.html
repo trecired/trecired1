@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Šah protiv kompjutera</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard.min.css" />
+  <link rel="stylesheet" href="chessboard.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -24,8 +24,8 @@
   <div id="board"></div>
   <div id="status"></div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard.min.js"></script>
+  <script src="chess.js"></script>
+  <script src="chessboard.js"></script>
   <script>
     const board = Chessboard('board', {
       draggable: true,
@@ -45,7 +45,7 @@
 
       if (move === null) return 'snapback';
 
-      window.setTimeout(makeRandomMove, 250);
+      setTimeout(makeRandomMove, 300);
       updateStatus();
     }
 
@@ -77,6 +77,7 @@
   </script>
 </body>
 </html>
+
 
        
 
